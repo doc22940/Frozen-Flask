@@ -21,4 +21,6 @@ jobs:
       run: pip install -e .
 
     - name: Run tests
-      run: python -m flask_frozen.tests
+      run: |
+        export LANG=en_US.utf8  # needed only for Python 2.7
+        python -m flask_frozen.tests
